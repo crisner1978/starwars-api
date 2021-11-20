@@ -20,14 +20,6 @@ export default function Planets() {
     }
   );
 
-  useEffect(() => {
-    if (data?.hasMore) {
-      queryClient.prefetchQuery(["planets", page + 1], () =>
-        fetchPlanets(page + 1)
-      );
-    }
-  }, [data, page, queryClient]);
-
   return (
     <div>
       <div className="title">
