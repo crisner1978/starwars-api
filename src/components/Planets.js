@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { useQuery, useQueryClient } from "react-query";
+import { useState } from "react";
+import { useQuery } from "react-query";
 import Planet from "./Planet";
 
 const fetchPlanets = (page = 0) =>
@@ -7,7 +7,6 @@ const fetchPlanets = (page = 0) =>
 
 export default function Planets() {
   const [page, setPage] = useState(1);
-  const queryClient = useQueryClient();
 
   // react-query gives states of api call - isLoading, isError, isSuccess, isIdle
   // plus we get - error, data, isFetching
