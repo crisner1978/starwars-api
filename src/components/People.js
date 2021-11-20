@@ -1,13 +1,8 @@
-import { useQuery } from "react-query";
 import Person from "./Person";
+import usePeople from "../queryHooks/usePeople";
 
 export default function People() {
-  const fetchPeople = async () => {
-    const res = await fetch("https://swapi.dev/api/people");
-    return res.json();
-  };
-
-  const { data: people, status } = useQuery("people", fetchPeople);
+  const { data: people, status } = usePeople()
 
   return (
     <div>

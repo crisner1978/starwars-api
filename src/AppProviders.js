@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from "react-query"
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 const AppProviders = ({children}) => {
 
@@ -7,6 +8,7 @@ const AppProviders = ({children}) => {
 
     return (
         <QueryClientProvider client={queryClient}>
+            <ReactQueryDevtools />
             {children}
         </QueryClientProvider>
     )

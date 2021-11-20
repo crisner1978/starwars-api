@@ -55,3 +55,16 @@ button:hover {
   margin: 10px 0;
   color: #ffff57;
 }
+
+.page {
+  font-size: 20px;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
